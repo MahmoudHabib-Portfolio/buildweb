@@ -1,0 +1,30 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles//variables" as *;
+
+.brandCont{
+    padding: 6em 6em 0em 6em;
+    display: block;
+    @include w-full;
+    text-align: center;
+    @include mobile-screen{
+        padding: 2em 0em;
+    }
+}
+
+.brandCont > div:nth-child(1) {
+    font-family: $font-Manrope;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.marqueeContainer{
+    @include flex;
+    @include flex-row;
+    overflow: hidden;
+    @include w-full;
+    padding: 3em 0em;
+}
+
+.marqImg{
+    padding: 0em 1em;
+}

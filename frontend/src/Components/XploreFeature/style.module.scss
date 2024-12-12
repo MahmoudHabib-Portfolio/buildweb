@@ -1,0 +1,288 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles/variables" as *;
+
+.xploreCont{
+    position: relative;
+    padding: 5em 8em;
+    @include w-full;
+    @include large-screen{
+        padding: 2em 1em;
+    }
+}
+
+.xploreCont::after{
+    content: "";
+    position: absolute;
+    background: radial-gradient(50% 50% at 50% 50%, #96EA63 0%, rgba(7, 7, 10, 0) 100%);
+    left: 19.1%;
+    right: 19.79%;
+    top: 0%;
+    bottom: 32.95%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.xploreHead{
+    text-align: center;
+    display: block;
+    @include w-full;
+    z-index: 100;
+}
+
+.xploreHead > h1{
+    color: $Inter;
+    font-family: $font-Manrope;
+    letter-spacing: 2px;
+    z-index: 100;
+}
+
+.xploreHead > div{
+    font-family: $font-DMSans;
+    font-size: 18px;
+    color: $Inter;
+    font-weight: 600;
+    padding: 3em 0em 0em 0em;
+    letter-spacing: 1px;
+    z-index: 100;
+    @include tablet-screen{
+        font-size: 16px;
+    }
+}
+
+.featureBody{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include gap-x-3;
+    @include w-full;
+    padding: 3em 0em 1em 0em;
+    @include mobile-screen{
+        @include flex-row-vp;
+        @include gap-y-3;
+    }
+}
+
+.featureBody > div:nth-child(1){
+    position: relative;
+    background: $primary-color;
+    border: 0.5px solid #D3D3D6;
+    border-radius: 12px;
+    width: 100%;
+    padding: 1em 1em;
+    overflow: hidden;
+}
+
+.featureBody > div:nth-child(1)::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(140.41deg, rgba(255, 255, 255, 0) -23.39%, #96EA63 109.08%);
+    filter: blur(72.55px);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 351.5px;
+    height: 386.5px;
+    left: 393px;
+    top: 0px;
+    opacity: 0.5;
+}
+
+.featureBody > div:nth-child(1) > div:nth-child(1){
+    font-family: $font-Manrope;
+    color: $Inter;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.featureBody > div:nth-child(1) > h5{
+    font-family: $font-Manrope;
+    color: $Urbanist;
+    letter-spacing: 1px;
+    padding: 1em 0em;
+}
+
+.featureBody > div:nth-child(2){
+    position: relative;
+    background: $primary-color;
+    border: 0.5px solid #D3D3D6;
+    border-radius: 12px;
+    width: 100%;
+    padding: 1em 1em;
+    overflow: hidden;
+    background-image: url('/src/assets/imgs/backgPath.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 75% 75%;
+    background-origin: border-box;
+    @include medium-screen{
+        background-image: none;
+        margin-top: 2em;
+        margin-right: 0em;
+    }
+}
+
+.featureBody > div:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(140.41deg, rgba(255, 255, 255, 0) -23.39%, #96EA63 109.08%);
+    filter: blur(72.55px);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 351.5px;
+    height: 386.5px;
+    left: 393px;
+    top: 0px;
+    opacity: 0.5;
+}
+
+.featureBody > div:nth-child(2) > h4{
+    font-family: $font-Manrope;
+    color: $Inter;
+    letter-spacing: 1px;
+}
+
+.featureBody > div:nth-child(2) > h5{
+    font-family: $font-Manrope;
+    color: $Urbanist;
+    letter-spacing: 1px;
+    padding: 1em 0em;
+}
+
+.microService{
+    padding: 1em 0em;
+    @include flex;
+    @include flex-col;
+    @include gap-y-4;
+    @include w-full;
+}
+
+.microServiceCont{
+    @include flex;
+    @include flex-row;
+    @include gap-x-3;
+}
+
+.microServiceCont2{
+    @include flex;
+    @include flex-row;
+    @include justify-center;
+    margin-top: 2.2em;
+    margin-right: 3em;
+}
+
+.featureSections{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include gap-x-3;
+    @include mobile-screen{
+        @include flex-row-vp;
+        @include gap-y-3;
+    }
+}
+
+.featureSections > div:nth-child(1){
+    @include flex;
+    @include flex-col;
+    @include gap-y-3;
+    @include w-full;
+    background: $primary-color;
+    border-radius: 12px;
+    border: 1px solid $borderC;
+    backdrop-filter: blur(12.9px);
+    padding: 1em;
+    overflow: hidden;
+    @include tablet-screen{
+        width: 35%;
+    }
+    @include mobile-screen{
+        width: 100%;
+    }
+}
+
+.featureSections > div:nth-child(1) > div:nth-child(1) > h4{
+    font-family: $font-Manrope;
+    color: $Inter;
+    letter-spacing: 1px;
+}
+
+.featureSections > div:nth-child(1) > div:nth-child(1) > h5{
+    font-family: $font-Manrope;
+    color: $Urbanist;
+    letter-spacing: 1px;
+    padding: 1em 0em;
+}
+
+.featureSections > div:nth-child(1) > div:nth-child(2){
+    text-align: center;
+}
+
+.featureSections > div:nth-child(2){
+    @include flex;
+    @include flex-col;
+    @include gap-y-3;
+    @include w-full;
+    background: $primary-color;
+    border-radius: 12px;
+    border: 1px solid $borderC;
+    backdrop-filter: blur(12.9px);
+    padding: 1em;
+    overflow: hidden;
+    @include tablet-screen{
+        width: 35%;
+    }
+    @include mobile-screen{
+        width: 100%;
+    }
+}
+
+.featureSections > div:nth-child(2) > div:nth-child(1) > h4{
+    font-family: $font-Manrope;
+    color: $Inter;
+    letter-spacing: 1px;
+}
+
+.featureSections > div:nth-child(2) > div:nth-child(1) > h5{
+    font-family: $font-Manrope;
+    color: $Urbanist;
+    letter-spacing: 1px;
+    padding: 1em 0em;
+}
+
+.featureSections > div:nth-child(2) > div:nth-child(2){
+    text-align: center;
+}
+
+.featureSections > div:nth-child(3){
+    @include flex;
+    @include flex-col;
+    @include gap-y-3;
+    @include w-full;
+    background: $primary-color;
+    border-radius: 12px;
+    border: 1px solid $borderC;
+    backdrop-filter: blur(12.9px);
+    padding: 1em;
+    overflow: hidden;
+    @include tablet-screen{
+        width: 35%;
+    }
+    @include mobile-screen{
+        width: 100%;
+    }
+}
+
+.featureSections > div:nth-child(3) > div:nth-child(1) > h4{
+    font-family: $font-Manrope;
+    color: $Inter;
+    letter-spacing: 1px;
+}
+
+.featureSections > div:nth-child(3) > div:nth-child(1) > h5{
+    font-family: $font-Manrope;
+    color: $Urbanist;
+    letter-spacing: 1px;
+    padding: 1em 0em;
+}
+
+.featureSections > div:nth-child(3) > div:nth-child(2){
+    text-align: center;
+}

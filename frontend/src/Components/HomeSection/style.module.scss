@@ -1,0 +1,136 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles//variables" as *;
+
+.contHome{
+    position: relative;
+    padding: 6em 0em;
+    @include mobile-screen{
+        padding: 3em 0em;
+    }
+}
+
+.contHome::after{
+    content:"";
+    position: absolute;
+    background: radial-gradient(50% 50% at 50% 50%, #96EA63 0%, #FFFFFF 100%);
+    opacity: 0.3;
+    left: 4.93%;
+    right: 5.63%;
+    top: -7.9%;
+    height: 85%;
+    bottom: 85.13%;
+    z-index: -1;
+}
+
+.contHome > h1{
+    @include w-full;
+    font-family: $font-BlankGroove-XtraBold;
+    color: $BlancG;
+    text-align: center;
+    font-size: 60px;
+    padding-right: 6em;
+    padding-left: 6em;
+    @include large-screen{
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+    @include medium-screen {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    @include mobile-screen{
+        font-size: 30px;
+    }
+}
+
+.contHome > p{
+    @include w-full;
+    font-family: $font-Manrope;
+    font-size: 21px;
+    text-align: center;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    @include mobile-screen{
+        font-size: 18px;
+    }
+}
+
+.navigate{
+    @include flex;
+    @include flex-row;
+    @include gap-x-6;
+    @include w-full;
+    @include justify-center;
+    padding: 3em;
+}
+
+.navButtn{
+    font-family: $font-Manrope;
+    @include small-screen{
+        font-size: 12px !important;
+    }
+}
+
+.navButtn2{
+    font-family: $font-Manrope;
+    @include small-screen{
+        font-size: 12px !important;
+        padding: 0.7em 2em !important;
+    }
+}
+
+.buildFeatures{
+    @include flex;
+    @include flex-row;
+    @include w-full;
+    @include justify-between;
+    @include gap-x-8;
+    padding: 0em 8em;
+    @include large-screen{
+        padding: 0em 2em;
+        /* @include gap-x-4; */
+    }
+    @include medium-screen{
+        @include flex-row-vp;
+        @include gap-y-6;
+        padding: 0em 1em;
+    }
+}
+
+.buildFeatures > div{
+    @include flex;
+    @include flex-col;
+    @include gap-y-12;
+    @include medium-screen{
+        @include w-full;
+        @include flex-col-vp;
+        @include justify-between;
+    }
+}
+
+.buildFeatures2{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include gap-x-4;
+    @include w-full;
+    @include small-screen{
+        @include flex-row-vp;
+        @include gap-y-6;
+    }
+}
+
+.buildFeatures2 > div:nth-child(2) > div{
+    font-family: $font-BlankGroove-Bold;
+    letter-spacing: 1px;
+}
+
+.buildFeatures2 > div:nth-child(2) > p{
+    font-family: $font-Inter;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding-top: 8px;
+    line-height: 1.3rem;
+}
+

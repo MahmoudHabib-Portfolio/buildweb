@@ -1,0 +1,62 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles/variables" as *;
+
+.contactCont{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include gap-x-3;
+    padding: 5em 4em;
+    @include w-full;
+    @include large-screen{
+        padding: 2em 1em;
+    }
+    @include mobile-screen{
+        @include flex-row-vp;
+        @include gap-y-3;
+    }
+}
+
+.contactCont > div:nth-child(1){
+    width: 50%;
+    @include mobile-screen{
+        width: 100%;
+    }
+}
+
+.contactCont > div:nth-child(1) > h2{
+    color: $BlancG;
+    font-family: $font-Manrope;
+    letter-spacing: 1px;
+}
+
+.contactCont > div:nth-child(1) > div{
+    color: $Urbanist;
+    font-family: $font-DMSans;
+    letter-spacing: 1px;
+    padding: 3em 0em;
+}
+
+.contactCont > div:nth-child(2){
+    width: 50%;
+    @include mobile-screen{
+        width: 100%;
+    }
+}
+
+.contctForm{
+    @include flex;
+    @include flex-col;
+    @include gap-y-3;
+    @include w-full;
+}
+
+.label{
+    font-family: $font-Manrope;
+    color: $Inter;
+    padding: 0.8em 0.3em;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 14px;
+    cursor: text;
+}

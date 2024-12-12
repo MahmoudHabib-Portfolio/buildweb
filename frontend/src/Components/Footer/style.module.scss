@@ -1,0 +1,72 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles//variables" as *;
+
+.footBlock{
+    @include flex;
+    @include flex-col;
+}
+
+.footBlock > div:nth-child(1){
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include w-full;
+    padding: 2em 8em;
+    border-top: 1px solid $borderC;
+    @include large-screen{
+        padding: 2em;
+    }
+    @include medium-screen{
+        @include flex-row-vp;
+        @include gap-y-3;
+        padding: 1em;
+    }
+}
+
+.footBlock > div:nth-child(2){
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include w-full;
+    padding: 2em 8em;
+    border-top: 1px solid $borderC;
+    @include large-screen{
+        padding: 2em;
+    }
+    @include small-screen{
+        @include flex-row-vp;
+        @include gap-y-6;
+    }
+}
+
+.footLinks > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footLinks > ul > li{
+    display: inline-block;
+    font-size: 16px;
+    color: $Manrope;
+    font-family: $font-Manrope;
+    cursor: pointer;
+    padding: 0em 1em;
+    line-height: 2.5em;
+    letter-spacing: 1px;
+    @include medium-screen{
+        display: list-item;
+    }
+}
+
+.footBlock > div:nth-child(2) > div:nth-child(3){
+    @include flex;
+    @include flex-row;
+    @include gap-x-6;
+}
+
+.footBlock > div:nth-child(2) > div:nth-child(1){
+    font-family: $font-Manrope;
+    letter-spacing: 1px;
+    font-size: 14px;
+}

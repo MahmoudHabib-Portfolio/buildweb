@@ -1,0 +1,102 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles//variables" as *;
+
+.mNav{
+    position: sticky;
+    top: 0;
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include w-full;
+    background: $primary-color;
+    border-bottom: 1px solid $borderC;
+    backdrop-filter: blur(5.45px);
+    padding: 1em 8em;
+    z-index: 100;
+    @include large-screen{
+        padding: 1em 2em;
+    }
+    @include small-screen{
+        padding: 1em;
+    }
+}
+
+.mNav >div:nth-child(2){
+    @include mobile-screen{
+        display: none;
+    }
+}
+
+.mNav > div:nth-child(2) > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mNav > div:nth-child(2) > ul > li{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-family: $font-Manrope;
+    color: $Manrope;
+    padding: 0em 2em;
+    line-height: 2.5em;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    @include tablet-screen{
+        padding: 0em 1em;
+    }
+}
+
+.mNav > div:nth-child(2) > ul > li::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: $buttbg;
+    left: 0;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: -50;
+    transition: all 0.2s ease-in-out;
+}
+
+.mNav > div:nth-child(2) > ul > li:hover{
+    font-weight: bold;
+}
+
+.mNav > div:nth-child(2) > ul > li:hover::after{
+    width: 50%;
+}
+
+/* .mNav > div:nth-child(2) > ul > li:hover{
+    color: $secondary-color;
+    background: #96EA63;
+} */
+
+.navButtn{
+    font-family: $font-Manrope;
+    @include mobile-portrait{
+        font-size: 12px !important;
+        padding: 0.8em 1.2em !important;
+        font-weight: bold;
+    }
+}
+
+.navEnd{
+    @include flex;
+    @include flex-row;
+    @include gap-x-3;
+    @include mobile-portrait{
+        @include gap-x-1;
+    }
+}
+
+.navBar{
+    display: none;
+    @include mobile-screen{
+        display: block;
+    }
+}

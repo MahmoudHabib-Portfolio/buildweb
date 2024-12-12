@@ -1,0 +1,86 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles/variables" as *;
+
+.AddBlock{
+    padding: 2em 8em;
+    @include w-full;
+    @include large-screen{
+        padding: 1em;
+    }
+}
+
+.AddBlock > div{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    position: relative;
+    padding: 2em;
+    border: 1px solid #D3D3D6;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: $primary-color;
+    overflow: hidden;
+    @include mobile-screen{
+        padding: 1.5em 1em;
+    }
+}
+
+.AddBlock > div::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 386.5px;
+    top: 0px;
+    right: 16em;
+    background: linear-gradient(140.41deg, #FFFFFF -23.39%, #96EA63 109.08%);
+    opacity: 0.5;
+    filter: blur(72.55px);
+    transform: rotate(180deg);
+    z-index: 10;
+}
+
+.AddBlock > div > div:nth-child(2){
+    line-height: 5em;
+}
+
+.addCont{
+    @include flex;
+    @include flex-col;
+    @include gap-y-4;
+}
+
+.addCont > div:nth-child(1) > h1{
+    font-family: $font-BlankGroove;
+    color: $BlancG;
+    letter-spacing: 1px;
+    z-index: 100;
+    @include tablet-screen{
+        font-size: 26px;
+    }
+    @include mobile-screen{
+        font-size: 22px;
+    }
+    @include small-screen{
+        font-size: 18px;
+    }
+}
+
+.addCont > div:nth-child(2) > div{
+    font-family: $font-Manrope;
+    color: $BlancG;
+    font-weight: 600;
+    letter-spacing: 1px;
+    @include mobile-screen{
+        font-size: 14px;
+    }
+    @include small-screen{
+        font-size: 12px;
+    }
+}
+
+.navButtn{
+    font-family: $font-Manrope;
+    @include mobile-screen{
+        font-size: 12px !important;
+    }
+}
